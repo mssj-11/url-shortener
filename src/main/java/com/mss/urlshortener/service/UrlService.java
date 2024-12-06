@@ -3,6 +3,8 @@ package com.mss.urlshortener.service;
 import com.mss.urlshortener.model.ShortenedUrl;
 import com.mss.urlshortener.repository.UrlRepository;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -15,13 +17,14 @@ public class UrlService {
 
     private final UrlRepository urlRepository;
 
-    private static final String BASE_URL = "http://localhost:8080/";
+    @Value("${url.base}")
+    private String baseUrl;
 
     public String shortenUrl(String originalUrl) {
         // Verificar si ya existe la URL en la base de datos
         Optional<ShortenedUrl> existing = urlRepository.findByOriginalUrl(originalUrl);
         if (existing.isPresent()) {
-            return BASE_URL + existing.get().getShortUrl();
+            return baseUrl + existing.get().getShortUrl();
         }
 
         // Generar una nueva URL corta
@@ -31,7 +34,7 @@ public class UrlService {
         shortenedUrl.setShortUrl(shortUrl);
         urlRepository.save(shortenedUrl);
 
-        return BASE_URL + shortUrl;
+        return baseUrl + shortUrl;
     }
 
     public String getOriginalUrl(String shortUrl) {
