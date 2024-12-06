@@ -1,4 +1,4 @@
-# URL - Shortener en Spring boot
+# URL - Shortener en Spring Boot
 
 Este proyecto es una API para acortar URLs, utilizando Spring Boot y una base de datos H2. Permite tomar una URL larga y devolver una versión corta, que luego puede ser utilizada para redirigir al usuario a la URL original.
 
@@ -55,4 +55,4 @@ url-shortener
 ```
 
 ####	GET
-`/api/{shortUrl}` por ejemplo: `http://localhost:8080/api/E1kavz`
+`http://localhost:8080/api/{shortUrl}` por ejemplo: `http://localhost:8080/api/E1kavz`
