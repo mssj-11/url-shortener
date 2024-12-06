@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ShortenedUrl {
-
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank(message = "La URL no puede estar vacía")
-    @Pattern(regexp = "^(https?|ftp)://[^\\s/$.?#].[^\\s]*$", message = "Debe proporcionar una URL válida")
+    @Pattern(regexp = "^(https?|ftp)://[^\\s/$.?#].[^\\s]*$", 
+             message = "Debe proporcionar una URL válida")
     private String originalUrl;
 
     @Column(unique = true, nullable = false)

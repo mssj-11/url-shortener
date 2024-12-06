@@ -2,7 +2,6 @@ package com.mss.urlshortener.service;
 
 import com.mss.urlshortener.model.ShortenedUrl;
 import com.mss.urlshortener.repository.UrlRepository;
-
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -52,6 +51,7 @@ public class UrlService {
         return shortCode.toString();
     }
 
+    
     private String getBaseUrl(HttpServletRequest request) {
         String scheme = request.getScheme(); // http o https
         String host = request.getServerName(); // localhost o dominio
