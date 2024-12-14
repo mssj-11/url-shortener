@@ -1,13 +1,16 @@
 package com.mss.urlshortener.service;
 
+import com.mss.urlshortener.dto.UrlResponseDTO;
 import com.mss.urlshortener.model.ShortenedUrl;
 import com.mss.urlshortener.repository.UrlRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -15,7 +18,18 @@ import java.util.Random;
 public class UrlService {
 
     private final UrlRepository urlRepository;
-
+    
+    
+    //	Listar Shorts
+    public List<UrlResponseDTO> getAllUrls() {
+        return urlRepository.findAll()
+                .stream()
+                .map(url -> new UrlResponseDTO(url.getId(), url.getOriginalUrl(), url.getShortUrl()))
+                .collect(Collectors.toList());
+    }
+    
+    
+    
     public String shortenUrl(HttpServletRequest request, String originalUrl) {
         // Verificar si la URL ya existe en la base de datos
         Optional<ShortenedUrl> existing = urlRepository.findByOriginalUrl(originalUrl);

@@ -6,7 +6,7 @@ import lombok.Data;
 
 
 @Data
-public class UrlRequestDTO {
+public class UrlRequestDTO {	// DTO de solicitudes
 
     @NotBlank(message = "La URL no puede estar vacía")
     @Pattern(regexp = "^(https?|ftp)://[^\\s/$.?#].[^\\s]*$", message = "Debe proporcionar una URL válida")
