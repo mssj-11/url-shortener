@@ -30,6 +30,13 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+	<!-- Swagger: https://springdoc.org/ -->
+	   <dependency>
+	      <groupId>org.springdoc</groupId>
+	      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+	      <version>2.7.0</version>
+	   </dependency>
+	<!-- Access Doc. Swagger: http://localhost:8080/swagger-ui/index.html -->
 		<!-- Spring Boot Starter Data JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
