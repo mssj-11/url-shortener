@@ -29,6 +29,7 @@ url-shortener
 │   │   │               │   └── UrlController.java     # Controlador de URLs
 │   │   │               ├── dto
 │   │   │               │   └── UrlRequestDTO.java     # DTO para la solicitud
+│   │   │               │   └── UrlResponseDTO.java    # DTO para la respuesta
 │   │   │               ├── model
 │   │   │               │   └── ShortenedUrl.java      # Entidad de la URL acortada
 │   │   │               ├── repository
@@ -56,3 +57,9 @@ url-shortener
 
 ####	GET
 `http://localhost:8080/api/{shortUrl}` por ejemplo: `http://localhost:8080/api/E1kavz`
+
+
+
+##	Documentacion
+`http://localhost:8080/swagger-ui/index.html`
+
