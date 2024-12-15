@@ -1,0 +1,8 @@
+com\mss\urlshortener\dto\UrlResponseDTO.class
+com\mss\urlshortener\model\ShortenedUrl.class
+com\mss\urlshortener\dto\UrlRequestDTO.class
+com\mss\urlshortener\repository\UrlRepository.class
+com\mss\urlshortener\service\UrlService.class
+com\mss\urlshortener\exception\GlobalExceptionHandler.class
+com\mss\UrlShortenerApplication.class
+com\mss\urlshortener\controller\UrlController.class
