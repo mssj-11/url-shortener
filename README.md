@@ -59,7 +59,7 @@ url-shortener
 `http://localhost:8080/api/{shortUrl}` por ejemplo: `http://localhost:8080/api/E1kavz`
 
 
-##	(DEMO)[https://url-shortener-wi9k.onrender.com/api]
+##	[DEMO](https://url-shortener-wi9k.onrender.com/api)
 ##	Documentacion
-`http://localhost:8080/swagger-ui/index.html` (link)[https://url-shortener-wi9k.onrender.com/swagger-ui/index.html]
+`http://localhost:8080/swagger-ui/index.html` [link](https://url-shortener-wi9k.onrender.com/swagger-ui/index.html)
 
